@@ -62,9 +62,6 @@ void single() {
 }
 
 void loop() { 
-  //writeArduinoOnMatrix();
-  //rows();
-  //columns();
   single();
   delay(5000);
   lc.clearDisplay(0);
