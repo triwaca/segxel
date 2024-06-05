@@ -1,3 +1,10 @@
+/*
+ * LED test SEGXEL
+ * 
+ * Turn on all leds on a single segxel panel
+ * 
+ */
+
 #include "LedControl.h"
 
 /*
