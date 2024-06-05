@@ -26,7 +26,7 @@ void setup() {
   }
   lc.shutdown(0,false);
   lc.shutdown(1,false);
-  lc.setIntensity(0,1);
+  lc.setIntensity(0,5);
   lc.setIntensity(1,5);
   lc.clearDisplay(0);
   lc.clearDisplay(1);
