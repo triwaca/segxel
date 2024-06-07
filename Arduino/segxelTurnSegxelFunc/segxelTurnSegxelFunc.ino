@@ -78,7 +78,7 @@ void ledOn(int lin, int col, bool value){
   }
 }
 
-void panelOff(){
+void clearDisplay(){
   lc.clearDisplay(0);
   lc.clearDisplay(1);
 }
@@ -169,4 +169,17 @@ void loop() {
     printNumber(1,1,i);
     delay(500);
   }
+  clearDisplay();
+  for(int i=0;i<10;i++){
+    printNumber(0,0,random(10));
+    printNumber(2,0,random(10));
+    printNumber(4,0,random(10));
+    printNumber(6,0,random(10));
+    printNumber(0,5,random(10));
+    printNumber(2,5,random(10));
+    printNumber(4,5,random(10));
+    printNumber(6,5,random(10));
+    delay(500);
+  }
+  clearDisplay();
 }
