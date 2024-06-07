@@ -88,7 +88,85 @@ void turnSegxelOn(int x, int y, bool h, bool v){
   ledOn(y*2+1,x,v);
 }
 
+void printNumber(int x, int y, int number){
+  switch(number){
+    case 1:
+      turnSegxelOn(x,y,0,1);
+      turnSegxelOn(x+1,y,0,0);
+      turnSegxelOn(x,y+1,0,1);
+      turnSegxelOn(x+1,y+1,0,0);
+      turnSegxelOn(x,y+2,0,0);
+      break;
+    case 2:
+      turnSegxelOn(x,y,1,0);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,1,1);
+      turnSegxelOn(x+1,y+1,0,0);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 3:
+      turnSegxelOn(x,y,1,0);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,1,0);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 4:
+      turnSegxelOn(x,y,0,1);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,1,0);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,0,0);
+      break;
+    case 5:
+      turnSegxelOn(x,y,1,1);
+      turnSegxelOn(x+1,y,0,0);
+      turnSegxelOn(x,y+1,1,0);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 6:
+      turnSegxelOn(x,y,1,1);
+      turnSegxelOn(x+1,y,0,0);
+      turnSegxelOn(x,y+1,1,1);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 7:
+      turnSegxelOn(x,y,1,0);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,0,0);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,0,0);
+      break;
+    case 8:
+      turnSegxelOn(x,y,1,1);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,1,1);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 9:
+      turnSegxelOn(x,y,1,1);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,1,0);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+    case 0:
+      turnSegxelOn(x,y,1,1);
+      turnSegxelOn(x+1,y,0,1);
+      turnSegxelOn(x,y+1,0,1);
+      turnSegxelOn(x+1,y+1,0,1);
+      turnSegxelOn(x,y+2,1,0);
+      break;
+  }
+
+}
+
 void loop() {
-  turnSegxelOn(7,7,1,1);
-  delay(1000);
+  for(int i=0;i<10;i++){
+    printNumber(1,1,i);
+    delay(500);
+  }
 }
